@@ -16,9 +16,9 @@ while True:
     print("Formato: ax² + bx + c = 0\n")
 
     try:    #Garante q o usuário digite apenas números.
-        a = float(input("Valor de a: "))
-        b = float(input("Valor de b: "))
-        c = float(input("Valor de c: "))
+        a = int(input("Valor de a: "))
+        b = int(input("Valor de b: "))
+        c = int(input("Valor de c: "))
     except ValueError:
         print("\nErro! Digite apenas números.")
         time.sleep(2)
@@ -37,13 +37,13 @@ while True:
             print("\nNão existem raízes reais!")
         elif delta == 0:
             raiz = -b / (2*a)
-            print(f"\nRaiz única: x = {raiz:.2f}")
+            print(f"\nRaiz única: x = {raiz}")
         else:
             raiz1 = (-b + math.sqrt(delta)) / (2*a)
             raiz2 = (-b - math.sqrt(delta)) / (2*a)
 
-            print(f"\nx1 = {raiz1:.2f}")
-            print(f"x2 = {raiz2:.2f}")
+            print(f"\nx1 = {raiz1}")
+            print(f"x2 = {raiz2}")
 
     print("\n" + "-" * 40)
 
